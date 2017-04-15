@@ -37,6 +37,7 @@ set shiftwidth=4
 
 " Set the mouse as the pointer device
 set mouse=a
+colorscheme hopscotch
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
