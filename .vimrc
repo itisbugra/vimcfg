@@ -22,6 +22,7 @@ Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'rdnetto/YCM-Generator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -30,18 +31,20 @@ filetype plugin indent on    " required
 " Enable syntax coloring and line numbering
 syntax on
 set number
+set tabstop=4
+set softtabstop=0 expandtab
+set shiftwidth=4
 
 " Set the mouse as the pointer device
 set mouse=a
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd vimenter * NERDTree
 
 map <C-n> :NERDTreeToggle<CR>
+map <C-ş> :bp<CR>
+map <C-i> :bn<CR>
 
 set hidden
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
 
 let g:airline#extensions#tabline#enabled = 1
